@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Select":"../../conponents/Select/Select"
+  },
+  "navigationBarTitleText": "创建管理"
+}

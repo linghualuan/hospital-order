@@ -1,0 +1,172 @@
+page {
+  background-color: #FAF2F9;
+}
+page .content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+page .content .col {
+  margin: 20rpx;
+  display: flex;
+  height: 60rpx;
+}
+page .content .col .title {
+  flex: 1;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  text-align: right;
+  padding-right: 30rpx;
+  text-shadow: 3rpx 3rpx 3rpx #ccc;
+}
+page .content .col .inp {
+  flex: 2;
+}
+page .content .col .inp input {
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  padding-left: 30rpx;
+  border-radius: 20rpx;
+  box-shadow: 6rpx 6rpx 6rpx #ccc;
+}
+page .content .col .inp textarea {
+  width: 87%;
+  background-color: white;
+  border-radius: 20rpx;
+  padding: 10rpx 30rpx;
+  box-shadow: 4rpx 4rpx 4rpx #ccc;
+}
+page .content .btn1 {
+  margin-top: 50rpx;
+}
+page .content .btn1 .btn {
+  width: 300rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 80rpx;
+  color: white;
+  border-radius: 25rpx;
+  background-color: #6DBBB4;
+  box-shadow: 2rpx 2rpx 4rpx #6dbbbc, -2rpx -2rpx 4rpx #6dbbbc;
+}
+page .content .btn2 {
+  margin-top: 50rpx;
+}
+page .content .btn2 .btn {
+  width: 300rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 80rpx;
+  color: white;
+  border-radius: 25rpx;
+  background-color: #FF0000;
+  box-shadow: 2rpx 2rpx 4rpx #FF0000, -2rpx -2rpx 4rpx #FF0000;
+}
+page .content .btn3 {
+  margin-top: 50rpx;
+}
+page .content .btn3 .btn {
+  width: 300rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 25rpx;
+  background-color: #99CCFF;
+  box-shadow: 2rpx 2rpx 4rpx #99CCFF, -2rpx -2rpx 4rpx #99CCFF;
+}
+page .content .demo {
+  width: 400rpx;
+  height: 200rpx;
+  background-color: black;
+}
+page .demo2 {
+  display: block;
+}
+page .demo3 {
+  display: none;
+}
+page .wrap {
+  top: 120rpx;
+  left: 10vw;
+  width: 80vw;
+  padding-bottom: 30rpx;
+  background-color: #eee;
+  position: absolute;
+  border-radius: 10rpx;
+  z-index: 10;
+}
+page .wrap .error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 50rpx;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: white;
+}
+page .wrap .error image {
+  width: 100%;
+  height: 100%;
+}
+page .wrap .title {
+  width: 70%;
+  font-size: 36rpx;
+  padding: 40rpx;
+}
+page .wrap .content1 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 40rpx;
+}
+page .wrap .content1 .item {
+  width: 25%;
+  height: 40rpx;
+  margin: 10rpx;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  line-height: 40rpx;
+  text-align: center;
+  background-color: #ccc;
+}
+page .wrap .container {
+  padding: 20rpx;
+  width: 90%;
+  height: 400rpx;
+  margin: 50rpx auto;
+  margin-top: 40rpx;
+  background-color: white;
+}
+page .wrap .container .container_item {
+  display: flex;
+  flex-direction: column;
+}
+page .wrap .demo {
+  padding: 0 40rpx;
+  display: flex;
+  text-align: center;
+  color: white;
+}
+page .wrap .demo .demo_fail {
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #bbb;
+  margin-right: 20rpx;
+  border-radius: 30rpx;
+}
+page .wrap .demo .demo_success {
+  flex: 1;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+  background-color: #6dbbbc;
+  border-radius: 30rpx;
+}

@@ -1,0 +1,68 @@
+page {
+  font-size: 34rpx;
+}
+page .header {
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  width: 90%;
+  display: flex;
+  position: relative;
+}
+page .header .header_title {
+  margin-top: 20rpx;
+  text-align: right;
+  margin-right: 30rpx;
+  float: left;
+}
+page .header .header_select {
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 3;
+  height: 70rpx;
+}
+page .number {
+  display: flex;
+  margin-top: 40rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+page .number .number_title {
+  flex: 1;
+  text-align: right;
+  margin-right: 30rpx;
+}
+page .number .number_int {
+  flex: 2;
+  padding-right: 50rpx;
+}
+page .number .number_int input {
+  box-shadow: 3rpx 3rpx 3rpx #ccc;
+  background-color: white;
+  height: 40rpx;
+  border-radius: 20rpx;
+  padding: 5rpx 30rpx;
+}
+page .number .number_int .picker {
+  height: 60rpx;
+}
+page .number .number_int .picker .input {
+  height: 44rpx;
+  line-height: 44rpx;
+  box-shadow: 3rpx 3rpx 3rpx #ccc;
+  background-color: white;
+  border-radius: 20rpx;
+  padding: 5rpx 30rpx;
+}
+page .submit {
+  width: 40vw;
+  height: 80rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  background-color: #6dbccc;
+  color: white;
+  margin: 40rpx auto;
+  line-height: 80rpx;
+  font-size: 40rpx;
+}

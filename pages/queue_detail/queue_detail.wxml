@@ -1,0 +1,38 @@
+<view class="content">
+    <view class="left_div"></view>
+    <view class="right_div"></view>
+    <view class="title">
+        <view class="title_img">
+            <image mode="widthFix" src="../../img/hospital.png"/>
+        </view>
+        <view class="title_name">
+            中南大学湘雅二医院
+        </view>
+    </view>
+    <view class="con_top">
+        <view class="top_project">{{project}}</view>
+        <view class="top_date">
+            <view class='item_title'>日期:</view>
+            <text>{{date}}</text>
+        </view>
+        <view class="top_date">
+            <view class='item_title'>需等待约:</view>
+            <text>{{cutDownTime}}分钟</text>
+        </view>
+        <view class="top_date">
+            <view class='item_title'>前方排队:</view>
+            <text>{{rank}}人</text>
+        </view>
+        <view class="top_date">
+            <view class='item_title'>排队序号:</view>
+            <text>{{scanNumber}}</text>
+        </view>
+        <view class="top_date">
+            <view class='item_title'>预计检查时间:</view>
+            <text >{{turnTime}}</text>
+        </view>
+        <view class="btn" bindtap="handleUnorder">
+            取消
+        </view>
+    </view>
+</view>

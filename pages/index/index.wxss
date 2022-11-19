@@ -1,0 +1,159 @@
+page {
+  background-color: #FAF2F9;
+  position: relative;
+  font-family: '幼圆';
+  padding-bottom: 20rpx;
+}
+page .content {
+  width: 100vw;
+}
+page .content .content_swiper swiper {
+  height: calc(100vw * 380 / 1100);
+  padding: 0 20rpx;
+}
+page .content .content_swiper swiper image {
+  width: 100%;
+  border-radius: 10rpx;
+}
+page .content .title {
+  width: 94%;
+  margin: 0 auto;
+  height: 50rpx;
+}
+page .content .content_item {
+  background-color: white;
+  margin-right: 4%;
+  margin-left: 4%;
+  flex-wrap: wrap;
+  margin-top: 40rpx;
+  margin-bottom: 10rpx;
+  padding-top: 20rpx;
+  border-radius: 20rpx;
+}
+page .content .content_item .content_title {
+  text-align: left;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  color: #aaa;
+}
+page .content .content_item .item_list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+page .content .content_item .item_list .item {
+  padding-top: 20rpx;
+  width: 25%;
+  font-size: 35rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+page .content .content_item .item_list .item navigator {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+page .content .content_item .item_list .item navigator image {
+  width: 60%;
+}
+page .content .content_item .item_list .item navigator .item_title {
+  text-align: center;
+}
+page .content .content_item .item_list .item .scanCode {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+page .content .content_item .item_list .item .scanCode image {
+  width: 60%;
+}
+page .content .content_item .item_list .item .scanCode .item_title {
+  text-align: center;
+}
+page .content .footer {
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  width: 92vw;
+  border-radius: 20rpx;
+}
+page .content .footer .item_instruction {
+  padding: 10rpx 10rpx;
+}
+page .content .footer .item_instruction .hint {
+  font-weight: 600;
+}
+page .content .footer .item_instruction .hint .dot {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #6dbbbc;
+}
+page .content .footer .instruction_title {
+  padding: 10rpx 10rpx;
+  text-indent: 1em;
+}
+page .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+page .background .inform {
+  width: 600rpx;
+  background-color: white;
+  position: relative;
+  margin: 100rpx auto;
+  z-index: 10;
+  padding: 20rpx;
+  border-radius: 30rpx;
+}
+page .background .inform .img {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx auto;
+}
+page .background .inform .img image {
+  width: 100%;
+  height: 100%;
+}
+page .background .inform .wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx 0;
+}
+page .background .inform .wrap p {
+  margin: 10rpx 0;
+}
+page .background .inform .wrap p:nth-child(1) {
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: 600;
+}
+page .background .inform .btn {
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  border-bottom-right-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  padding: 40rpx 0;
+}
+page .background .inform .btn .btn_item {
+  width: 250rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 2rpx solid #ccc;
+}
+page .background .inform .btn .btn_item:nth-child(2) {
+  background-color: #6dbbbc;
+  color: white;
+}

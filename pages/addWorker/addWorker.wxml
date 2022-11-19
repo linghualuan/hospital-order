@@ -1,0 +1,47 @@
+<view class='header'>
+    <view class='header_title'>选择管理身份</view>
+    <view class='header_select'>
+        <Select select="{{types}}" bindselectChange="handleSelectChange"></Select>
+    </view>
+</view>
+
+<view class='number'>
+    <view class='number_title'>工号</view>
+    <view class='number_int'>
+        <input type="text" bindinput="handleJobNum" value='{{jobNum}}'/>
+    </view>
+</view>
+
+<view class='number'>
+    <view class='number_title'>姓名</view>
+    <view class='number_int'>
+        <input type="text" bindinput="handleName" value='{{name}}'/>
+    </view>
+</view>
+
+<view class='number'>
+    <view class='number_title'>性别</view>
+    <view class='number_int'>
+        <picker mode="selector" value="{{sex}}" range="{{sexSelect}}" bindchange="handleSex">
+            <view class="picker">
+                <view class='input' style='{{sex ? "color:black" : "color:#888"}}'>{{sex}}</view>
+            </view>
+        </picker>
+    </view>
+</view>
+
+<view class='number'>
+    <view class='number_title'>联系方式</view>
+    <view class='number_int'>
+        <input type="text" bindinput="handleTel" value='{{tel}}'/>
+    </view>
+</view>
+
+<view class='number'>
+    <view class='number_title'>登录密码</view>
+    <view class='number_int'>
+        <input type="text" bindinput="handlePwd" value='{{password}}'/>
+    </view>
+</view>
+
+<view class='submit' bindtap='handleSubmit'>提交</view>

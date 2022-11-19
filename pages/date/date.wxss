@@ -1,0 +1,179 @@
+page,
+view,
+image,
+text,
+swiper,
+swiper-item,
+navigator,
+button {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+page {
+  background-color: #FAF2F9;
+  position: relative;
+}
+page .wrap {
+  padding: 10rpx 5%;
+  width: 100vw;
+  height: 100%;
+}
+page .wrap .title {
+  padding: 10rpx 0;
+}
+page .wrap .title text {
+  color: #6dbbbc;
+}
+page .wrap .date {
+  background-color: white;
+  padding-bottom: 20rpx;
+}
+page .wrap .date .orderProject {
+  text-align: center;
+  font-size: 38rpx;
+  font-weight: 600;
+}
+page .wrap .date .date_title {
+  padding: 10rpx;
+  display: flex;
+}
+page .wrap .date .date_title .left_arrow {
+  flex: 2;
+}
+page .wrap .date .date_title .left_arrow image {
+  width: 15%;
+  margin-left: 70%;
+}
+page .wrap .date .date_title .date_ym {
+  flex: 1;
+  font-size: 30rpx;
+}
+page .wrap .date .date_title .right_arrow {
+  flex: 2;
+}
+page .wrap .date .date_title .right_arrow image {
+  width: 15%;
+  margin-right: 70%;
+}
+page .wrap .date .week {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+page .wrap .date .week .week_item {
+  flex: 1;
+  text-align: center;
+}
+page .wrap .date .date_day {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+page .wrap .date .date_day .day {
+  width: 12.85vw;
+  height: 15vw;
+  padding: 0.5vw;
+}
+page .wrap .date .date_day .day .day_item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  border-radius: 20rpx;
+}
+page .wrap .date .date_day .day .day_item .item_num {
+  color: black;
+}
+page .wrap .date .date_day .day .day_item .item_allNumber {
+  color: white;
+  font-size: 24rpx;
+}
+page .wrap .date .date_day .day .abc {
+  background-color: #6dbbbc;
+}
+page .wrap .date .date_day .day .def {
+  background-color: #ccc;
+}
+page .wrap .select {
+  display: flex;
+  margin: 40rpx 20rpx;
+  height: 100rpx;
+  align-items: center;
+  justify-content: center;
+}
+page .wrap .select .select_title {
+  flex: 2;
+  font-size: 34rpx;
+  text-align: right;
+  padding-right: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+page .wrap .select .select_time {
+  flex: 3;
+  height: 50rpx;
+}
+page .wrap .announcement {
+  background-color: white;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+page .wrap .announcement .announcement_note {
+  margin-top: 30rpx;
+}
+page .wrap .submit {
+  width: 40vw;
+  height: 10vw;
+  background-color: #6dbbbc;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  margin-bottom: 80rpx;
+  text-align: center;
+  line-height: 10vw;
+  border-radius: 5vw;
+}
+page .wrap .submit text {
+  color: white;
+}
+page .message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+}
+page .message .container {
+  position: relative;
+  border-radius: 20rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  width: 80vw;
+  height: 70vh;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+page .message .container .wrap {
+  width: 90%;
+  height: 80%;
+  background-color: blue;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  background-color: white;
+}
+page .message .container .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 150rpx;
+  height: 60rpx;
+  background-color: #6dbbbc;
+  border-radius: 30rpx;
+  font-size: 30rpx;
+}

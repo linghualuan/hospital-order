@@ -1,0 +1,36 @@
+<view class="content">
+    <view wx:if="{{isLogin}}">
+        <view class="col">
+            <view class='title'>卡号</view>
+            <view class="inp">
+                <input type="text" value="{{medicalCard}}" bindinput="handleMedicalCard" placeholder="卡号" disabled/>
+            </view>
+        </view>
+        <view class="col">
+            <view class='title'>姓名</view>
+            <view class="inp"><input type="text" value="{{name}}" bindinput="handleName" placeholder="姓名"/></view>
+        </view>
+        <view class="col">
+            <view class='title'>性别</view>
+            <view class="inp">
+                <picker mode="selector" value="{{sex}}" range="{{sexSelect}}" bindchange="handlePendSex">
+                    <view class="picker">
+                        <view class='input'>{{sex}}</view>
+                    </view>
+                </picker></view>
+        </view>
+        <view class="col">
+            <view class='title'>联系方式</view>
+            <view class="inp"><input type="text" value="{{tel}}" bindinput="handleTel" placeholder="联系方式"/></view>
+        </view>
+        <view class="btn">
+            <button bindtap="handleSubmit">提交</button>
+        </view>
+    </view>
+    <view wx:if='{{!isLogin}}'>
+        <view class='Nonelogin_img'>
+            <image src='../../img/NoData.png' mode='widthFix'/>
+        </view>
+        <view class='login_btn' bindtap='handleLogin'>去登录</view>
+    </view>
+</view>

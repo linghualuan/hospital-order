@@ -1,0 +1,48 @@
+<view class="content">
+    <view class="title">
+        <view class="title_img">
+            <image mode="widthFix" src="../../img/hospital.png"/>
+        </view>
+        <view class="title_name">
+            中南大学湘雅二医院
+        </view>
+    </view>
+    <view class="con_top">
+        <view class="top_project">{{orderProject}}</view>
+        <view class="top_item">
+            <view class='item_title'>
+                检查项目 :
+            </view>
+            <view class='item_content'>
+                {{orderProject}}
+            </view>
+        </view>
+        <view class="top_item">
+            <view class='item_title'>
+              预约日期 :
+            </view>
+            <view class='item_content'>
+                {{orderDate}}
+            </view>
+        </view>
+        <view class="top_item">
+            <view class='item_title'>
+              预约时段 :
+            </view>
+            <view class='item_content'>
+                {{orderTime}}
+            </view>
+        </view>
+        <view class="top_item" wx:if="{{errorMsg}}">
+            <view class='item_title'>
+                失败原因 :
+            </view>
+            <view class='item_content'>
+                <textarea cols="30" rows="10">{{errorMsg}}</textarea>
+            </view>
+        </view>
+        <view class='btn'  wx:if="{{demo==='1' ? true : false}}">
+            <view class='btn_delete' bindtap='handleDelete'>取消预约</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,71 @@
+{
+  "setting": {
+    "urlCheck": false,
+    "compileHotReLoad": true,
+    "useIsolateContext": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "管理员登录页面",
+          "pathName": "pages/super_user/super_user",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "管理端我的管理",
+          "pathName": "pages/my_project/my_project",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "超级管理—用户信息",
+          "pathName": "pages/user_info/user_info",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "创建预约",
+          "pathName": "pages/set_order/set_order",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/nurse_unapply/nurse_unapply",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/detail_injection/detail_injection",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "用户退约",
+          "pathName": "pages/user_exitOrder/user_exitOrder",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "用户退约",
+          "pathName": "pages/user_exitOrder/user_exitOrder",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "%E6%8E%92%E9%98%9F%E6%8C%82%E5%8F%B7"
+}

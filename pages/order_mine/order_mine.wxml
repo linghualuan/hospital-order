@@ -1,0 +1,81 @@
+<SearchInput></SearchInput>
+<Tabs tabs="{{tabs}}" binditemTabChange="handleItemTabChange">
+    <block wx:if="{{tabs[0].isActive}}">
+        <view wx:if="{{userInfo.length}}">
+            <view class="item" wx:for="{{userInfo}}" wx:key="*this">
+                <navigator url="../myOrder_detail/myOrder_detail?id={{item.id}}&demo={{1}}" open-type="navigate">
+                    <view class="top">
+                        <view class="top_img">
+                            <image mode="widthFix" src="../../img/hospital.png"/>
+                        </view>
+                        <view class="top_title">
+                            <view class="title_address">中南大学湘雅二医院</view>
+                            <view class="title_project">{{item.orderProject}}</view>
+                        </view>
+                        <view class="top_icon">
+                            <image mode="widthFix" src="../../img/enterInto.png"/>
+                        </view>
+                    </view>
+                    <view class="bottom">
+                        <view class="btm_time">预约时段: {{item.orderTime}}</view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+        <view wx:if="{{!userInfo.length}}" class='noData'>
+            <image src='../../img/NoData.png' mode="widthFix"/>
+        </view>
+    </block>
+    <block wx:if='{{tabs[1].isActive}}'>
+        <view wx:if="{{userInfoPassed.length}}">
+            <view class="item" wx:for="{{userInfoPassed}}" wx:key="*this">
+            <navigator open-type="navigate" url='../myOrder_detail/myOrder_detail?id={{item.id}}&demo={{2}}'>
+                <view class="top">
+                <view class="top_img">
+                    <image mode="widthFix" src="../../img/hospital.png"/>
+                </view>
+                <view class="top_title">
+                    <view class="title_address">中南大学湘雅二医院</view>
+                    <view class="title_project">{{item.orderProject}}</view>
+                </view>
+                <view class="top_icon">
+                    <image mode="widthFix" src="../../img/enterInto.png"/>
+                </view>
+            </view>
+            <view class="bottom">
+                <view class="btm_time">预约时段: {{item.orderTime}}</view>
+            </view>
+            </navigator>
+        </view>
+        </view>
+        <view wx:if="{{!userInfoPassed.length}}" class='noData'>
+            <image src='../../img/NoData.png' mode="widthFix"/>
+        </view>
+    </block>
+    <block wx:if='{{tabs[2].isActive}}'>
+        <view wx:if="{{userInfoFail.length}}">
+            <view class="item" wx:for="{{userInfoFail}}" wx:key="*this">
+            <navigator open-type="navigate" url='../myOrder_detail/myOrder_detail?id={{item.id}}&demo={{2}}'>
+                <view class="top">
+                <view class="top_img">
+                    <image mode="widthFix" src="../../img/hospital.png"/>
+                </view>
+                <view class="top_title">
+                    <view class="title_address">中南大学湘雅二医院</view>
+                    <view class="title_project">{{item.orderProject}}</view>
+                </view>
+                <view class="top_icon">
+                    <image mode="widthFix" src="../../img/enterInto.png"/>
+                </view>
+            </view>
+            <view class="bottom">
+                <view class="btm_time">预约时段: {{item.orderTime}}</view>
+            </view>
+            </navigator>
+        </view>
+        </view>
+        <view wx:if="{{!userInfoFail.length}}" class='noData'>
+            <image src='../../img/NoData.png' mode="widthFix"/>
+        </view>
+    </block>
+</Tabs>

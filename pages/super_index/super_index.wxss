@@ -1,0 +1,254 @@
+page {
+  background-color: #FAF2F9;
+  position: relative;
+  font-family: '幼圆';
+}
+page .headTitle {
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+page .userList {
+  padding: 30rpx;
+}
+page .userList .list_item {
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: white;
+  float: left;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  background-color: #6dbbbc;
+}
+page .userList .add_item {
+  width: 120rpx;
+  float: left;
+}
+page .userList .add_item image {
+  width: 100%;
+}
+page .content {
+  width: 100vw;
+}
+page .content .content_swiper swiper {
+  height: calc(100vw * 380 / 1100);
+  padding: 0 20rpx;
+}
+page .content .content_swiper swiper image {
+  width: 100%;
+  border-radius: 10rpx;
+}
+page .content .title {
+  width: 94%;
+  margin: 10rpx auto;
+}
+page .content .content_item {
+  width: 92%;
+  background-color: white;
+  margin-right: 4%;
+  margin-left: 4%;
+  margin-bottom: 10rpx;
+  padding-top: 20rpx;
+  border-radius: 20rpx;
+}
+page .content .content_item .content_title {
+  text-align: left;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  color: #aaa;
+}
+page .content .content_item .item_list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+page .content .content_item .item_list .item {
+  flex: 1;
+  padding-top: 20rpx;
+  width: 25%;
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+page .content .content_item .item_list .item navigator {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+page .content .content_item .item_list .item navigator image {
+  width: 30%;
+}
+page .content .content_item .item_list .item navigator .item_title {
+  text-align: center;
+}
+page .content .content_item .item_list .item .QRcode {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+page .content .content_item .item_list .item .QRcode image {
+  width: 30%;
+}
+page .content .content_item .item_list .item .QRcode .item_title {
+  text-align: center;
+}
+page .content .content_mag {
+  width: 92%;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 20rpx;
+}
+page .content .content_mag p {
+  display: block;
+  margin: 20rpx;
+  font-size: 35rpx;
+}
+page .showQRcode {
+  position: absolute;
+  top: 40vw;
+  left: 10vw;
+  width: 80vw;
+  height: 550rpx;
+  background-color: white;
+  border-radius: 10rpx;
+}
+page .showQRcode .codeHeader {
+  height: 10vw;
+  position: relative;
+}
+page .showQRcode .codeHeader .code_title {
+  margin-top: 20rpx;
+  font-size: 40rpx;
+  text-align: center;
+}
+page .showQRcode .codeHeader .code_error {
+  position: absolute;
+  right: 10rpx;
+  top: 0;
+}
+page .showQRcode .codeHeader .code_error image {
+  width: 50rpx;
+  height: 50rpx;
+}
+page .showQRcode .selectUser .admin {
+  width: 80%;
+  height: 150rpx;
+  background-color: #3399CC;
+  display: flex;
+  align-items: center;
+  border-radius: 20rpx;
+  margin: 40rpx auto;
+  font-size: 40rpx;
+}
+page .showQRcode .selectUser .admin .admin_title {
+  flex: 3;
+  color: white;
+  text-align: center;
+}
+page .showQRcode .selectUser .admin .admin_img {
+  flex: 1;
+}
+page .showQRcode .selectUser .admin .admin_img image {
+  width: 50%;
+}
+page .showQRcode .selectUser .patient {
+  width: 80%;
+  height: 150rpx;
+  background-color: #99CCCC;
+  display: flex;
+  align-items: center;
+  border-radius: 20rpx;
+  margin: 40rpx auto;
+}
+page .showQRcode .selectUser .patient .patient_title {
+  flex: 3;
+  color: white;
+  text-align: center;
+}
+page .showQRcode .selectUser .patient .patient_img {
+  flex: 1;
+}
+page .showQRcode .selectUser .patient .patient_img image {
+  width: 50%;
+}
+page .showQRcode .QRCode {
+  text-align: center;
+}
+page .showQRcode .QRCode .QRCode_admin {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto;
+}
+page .showQRcode .QRCode .QRCode_admin image {
+  width: 100%;
+}
+page .showQRcode .QRCode .QRCode_patient {
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto;
+}
+page .showQRcode .QRCode .QRCode_patient image {
+  width: 100%;
+}
+page .showQRcode .QRCode .img_btn {
+  width: 200rpx;
+  height: 80rpx;
+  background-color: #66CCFF;
+  margin: 30rpx auto;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 20rpx;
+}
+page .notice {
+  width: 90vw;
+  height: 300rpx;
+  padding-bottom: 30rpx;
+  margin: 0 auto;
+  background-color: white;
+  position: absolute;
+  top: 300rpx;
+  left: 50%;
+  border-radius: 20rpx;
+  transform: translateX(-45vw);
+}
+page .notice .notice_img {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+}
+page .notice .notice_img image {
+  width: 45rpx;
+}
+page .notice .notice_input {
+  position: absolute;
+  top: 80rpx;
+  width: 100%;
+}
+page .notice .notice_input input {
+  border: 4rpx solid #ccc;
+  height: 80rpx;
+  border-radius: 40rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+page .notice .notice_input .notice_confirm {
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: white;
+  border-radius: 40rpx;
+  background-color: #66CCFF;
+  margin: 0 auto;
+  margin-top: 40rpx;
+}

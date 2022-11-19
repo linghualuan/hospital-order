@@ -1,0 +1,14 @@
+<view class="content">
+    <view class="col">
+        <view class="title">检查项目</view>
+        <view class="inp"><input type="text" value="{{orderProject}}"/></view>
+    </view>
+    <view class="col">
+        <view class="title">检查日期</view>
+        <view class="inp"><input type="text" value="{{orderDate}}"/></view>
+    </view>
+    <view class="col">
+        <view class="title">检查时间</view>
+        <view class="inp"><input type="text" value="{{orderTime}}"/></view>
+    </view>
+</view>

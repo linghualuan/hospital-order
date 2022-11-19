@@ -1,0 +1,179 @@
+page,view,image,text,swiper,swiper-item,navigator,button{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+page{
+    background-color: #FAF2F9;
+    position: relative;
+    .wrap{
+        padding:10rpx 5%;
+        width:100vw;
+        height:100%;
+        .title{
+            padding:10rpx 0;
+            text{
+                color:#6dbbbc;
+            }
+        }
+        .date{
+            background-color: white;
+            padding-bottom: 20rpx;
+            .orderProject{
+                text-align: center;
+                font-size: 38rpx;
+                font-weight: 600;
+            }
+            .date_title{
+                padding:10rpx;
+                display: flex;
+                .left_arrow{
+                    flex:2;
+                    image{
+                        width:15%;
+                        margin-left:70%;
+                    }
+                }
+                .date_ym{
+                    flex:1;
+                    font-size: 30rpx;
+                }
+                .right_arrow{
+                    flex:2;
+                    image{
+                        width:15%;
+                        margin-right:70%;
+                    }
+                }
+            }
+            .week{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .week_item{
+                    flex:1;
+                    text-align: center;
+                }
+            }
+            .date_day{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                // height:77.1vw;
+                .day{
+                    width:12.85vw;
+                    height:15vw;
+                    padding:0.5vw;
+                    .day_item{
+                        width:100%;
+                        height:100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content:space-around;
+                        text-align: center;
+                        border-radius: 20rpx;
+                        .item_num{
+                            color:black;
+                        }
+                        .item_allNumber{
+                            color:white;
+                            font-size: 24rpx;
+                        }
+                    }
+                    .abc{
+                        background-color: #6dbbbc;
+                    }
+                    .def{
+                        background-color: #ccc;
+                    }
+                }
+            }
+        }
+        .select{
+            display: flex;
+            margin:40rpx 20rpx;
+            height:100rpx;
+            align-items: center;
+            justify-content: center;
+            .select_title{
+                flex:2;
+                font-size: 34rpx;
+                text-align: right;
+                padding-right: 30rpx;
+                height:100rpx;
+                line-height: 100rpx;
+            }
+            .select_time{
+                flex:3;
+                height:50rpx;
+            }
+        }
+
+        .announcement {
+            background-color: white;
+            padding: 20rpx;
+            border-radius: 20rpx;
+            .announcement_title {
+
+            }
+            .announcement_note {
+                margin-top: 30rpx;
+            }
+        }
+
+        .submit{
+            width:40vw;
+            height:10vw;
+            background-color: #6dbbbc;
+            margin:0 auto;
+            margin-top:40rpx;
+            margin-bottom:80rpx;
+            text-align: center;
+            line-height: 10vw;
+            border-radius: 5vw;
+            text{
+                color:white;
+            }
+        }
+    }
+
+    .message {
+        position: absolute;
+        top:0;
+        left:0;
+        width:100vw;
+        height:100%;
+        .container{
+            position: relative;
+            border-radius: 20rpx;
+            margin:0 auto;
+            margin-top:100rpx;
+            width: 80vw;
+            height: 70vh;
+            background-color: #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            .wrap{
+                width:90%;
+                height:80%;
+                background-color: blue;
+                margin:0 auto;
+                margin-top:30rpx;
+                background-color: white;
+            }
+            .btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color:white;
+                width:150rpx;
+                height:60rpx;
+                background-color: #6dbbbc;
+                border-radius: 30rpx;
+                font-size: 30rpx;
+            }
+        }
+    }
+}

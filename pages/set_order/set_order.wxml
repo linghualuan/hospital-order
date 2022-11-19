@@ -1,0 +1,27 @@
+<view class='header'>
+    <view class='header_img'>
+        <image src='../../img/magnifyingGlass.png' mode='widthFix'/>
+    </view>
+    <view class='header_inp'>
+        <input type="text" placeholder="请输入..." bindinput='handleSearch'/>
+    </view>
+</view>
+<view class='wrap' wx:if="{{projectList.length>0}}">
+    <view class="project" wx:for="{{projectList}}" wx:key="*this" bindlongpress="handleDelete" data-index="{{index}}">
+        <navigator class="project_wrap" url="../handle_project/handle_project?orderProject={{item.orderProject}}">
+            <view class="project_left">
+                <view class="set">创建</view>
+            </view>
+            <view class="project_right">
+                <view class="check">检查项目</view>
+                <view class="project_name">{{item.orderProject}}</view>
+            </view>
+            <view class="project_icon">
+                <image src="/img/advance.png"></image>
+            </view>
+        </navigator>
+    </view>
+</view>
+<view wx:if="{{projectList.length === 0}}" class='noData'>
+    <image src='../../img/NoData.png'></image>
+</view>

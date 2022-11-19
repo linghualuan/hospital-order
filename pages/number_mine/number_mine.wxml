@@ -1,0 +1,60 @@
+<Tabs tabs="{{tabs}}" binditemTabChange="handleItemTabChange">
+    <view class="title">
+        *注意：等待时间仅作为参考，请不要远离科室。
+    </view>
+    <block wx:if="{{tabs[0].isActive}}">
+        <view wx:if="{{userInfoInjection.length}}">
+            <view class="item" wx:for="{{userInfoInjection}}" wx:key="*this" data-index="index">
+            <navigator open-type="navigate" url="../queue_detail_injection/queue_detail_injection?id={{item.id}}&demo={{1}}">
+                <view class="top">
+                <view class="top_img">
+                    <image mode="widthFix" src="/img/hospital.png"/>
+                </view>
+                <view class="top_title">
+                    <view class="title_address">中南大学湘雅二医院</view>
+                    <view class="title_project">{{item.project}}</view>
+                </view>
+                <view class="top_icon">
+                    <image mode="widthFix" src="/img/enterInto.png"/>
+                </view>
+            </view>
+            <view class="bottom">
+                <view class="btm_number">状态:{{item.injectState===0?'未注射':(item.injectState===1?'已注射':'失败')}}</view>
+                <view class="btm_person">日期:{{item.date}}</view>
+            </view>
+            </navigator>
+        </view>
+        </view>
+        <view wx:if="{{!userInfoInjection.length}}" class='noData'>
+            <image src='/img/NoData.png' mode="widthFix"/>
+        </view>
+    </block>
+    <block wx:if="{{tabs[1].isActive}}">
+        <view wx:if="{{userInfoInspect.length}}">
+            <view class="item" wx:for="{{userInfoInspect}}" wx:key="*this" data-index="index">
+            <navigator open-type="navigate" url="../queue_detail/queue_detail?id={{item.id}}&demo={{1}}">
+                <view class="top">
+                <view class="top_img">
+                    <image mode="widthFix" src="/img/hospital.png"/>
+                </view>
+                <view class="top_title">
+                    <view class="title_address">中南大学湘雅二医院</view>
+                    <view class="title_project">{{item.project}}</view>
+                </view>
+                <view class="top_icon">
+                    <image mode="widthFix" src="/img/enterInto.png"/>
+                </view>
+            </view>
+            <view class="bottom">
+                <view class="btm_number">排队序号:{{'  '+item.scanNumber}}</view>
+                <view class="btm_number">预计检查时间:{{'  '+item.turnTime}}</view>
+                <view class="btm_number">大约等待时长:{{'  '+item.cutDownTime}}分钟</view>
+            </view>
+            </navigator>
+        </view>
+        </view>
+        <view wx:if="{{!userInfoInspect.length}}" class='noData'>
+            <image src='/img/NoData.png' mode="widthFix"/>
+        </view>
+    </block>
+</Tabs>

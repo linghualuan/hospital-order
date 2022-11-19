@@ -1,0 +1,35 @@
+<view class="content" style="{{demo1?'filter: brightness(40%);background-color:white':''}}">
+    <view class="col">
+        <view class="title">卡号</view>
+        <view class="inp"><input type="text" value="{{medicalCard}}" disabled/></view>
+    </view>
+    <view class="col">
+        <view class="title">姓名</view>
+        <view class="inp"><input type="text" value="{{name}}" disabled/></view>
+    </view>
+    <view class="col">
+        <view class="title">性别</view>
+        <view class="inp"><input type="text" value="{{sex}}" disabled/></view>
+    </view>
+    <view class="col">
+        <view class="title">联系方式</view>
+        <view class="inp"><input type="text" value="{{tel}}" disabled/></view>
+    </view>
+    <view class="col">
+        <view class="title">预约项目</view>
+        <view class="inp"><input type="text" value="{{orderProject}}" disabled/></view>
+    </view>
+    <view class="col">
+        <view class="title">预约日期</view>
+        <view class="inp"><input type="text" value="{{orderDate}}" disabled/></view>
+    </view>
+    <view class="col">
+        <view class="title">预约时间段</view>
+        <view class="inp"><input type="text" value="{{orderTime}}" disabled/></view>
+    </view>
+    <view class="col" wx:if="{{errorMsg}}">
+        <view class="title">失败原因</view>
+        <view class="inp"><textarea cols="10" rows="10" value='{{errorMsg}}'></textarea></view>
+    </view>
+</view>
+

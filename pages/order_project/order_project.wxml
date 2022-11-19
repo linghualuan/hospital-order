@@ -1,0 +1,41 @@
+<view class='header'>
+    <view class='header_img'>
+        <image src='/img/magnifyingGlass.png' mode='widthFix'/>
+    </view>
+    <view class='header_inp'>
+        <input type="text" placeholder="请输入..." bindinput='handleSearch'/>
+    </view>
+</view>
+<view class="content">
+   <view wx:if="{{project.length > 0}}">
+        <view class="item" wx:for="{{project}}" wx:key="projectId">
+            <navigator open-type="navigate" url="../date/date?orderProject={{item.orderProject}}&note={{item.note}}">
+                <view class="left">
+                    <view class="left_top">
+                        <view class="item_img">
+                            <image src="/img/hospital.png" mode="widthFix"/>
+                        </view>
+                        <view class="item_wrap">
+                            <view class="inspect">检查项目</view>
+                            <view class="project">{{item.orderProject}}</view>
+                        </view>
+                    </view>
+                    <!-- <view class="left_bottom">
+                        <view class="statistics">
+                            今日统计
+                        </view>
+                        <view class="number">
+                            可预约数量：{{item.orderPeople}}
+                        </view>
+                    </view> -->
+            </view>
+            <view class="right">
+                <image src="/img/advance.png" mode="widthFix"/>
+            </view>
+            </navigator>
+        </view>
+   </view>
+   <view wx:else="{{!project}}" class='noData'>
+        <image src='/img/NoData.png'></image>
+   </view>
+</view>

@@ -1,0 +1,29 @@
+page {
+  padding: 30rpx;
+}
+page .header {
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  margin: 20rpx 0;
+}
+page .header .dot {
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #6dbbbc;
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+page .header .header_item {
+  font-size: 45rpx;
+  font-weight: 600;
+}
+page .item {
+  padding: 10rpx 0;
+  text-indent: 1em;
+}
+page .item span {
+  font-size: 40rpx;
+  font-weight: 600;
+  color: red;
+}

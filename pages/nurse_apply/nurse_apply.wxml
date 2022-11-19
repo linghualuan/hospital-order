@@ -1,0 +1,65 @@
+<view class="content" style="{{demo1?'filter: brightness(40%);background-color:white':''}}">
+    <view class="col">
+        <view class="title">卡号</view>
+        <view class="inp"><input type="text" value="{{medicalCard}}" disabled/></view>
+    </view>
+    <view class="col">
+        <view class="title">姓名</view>
+        <view class="inp"><input type="text" value="{{name}}" disabled/></view>
+    </view>
+    <view class="col">
+        <view class="title">性别</view>
+        <view class="inp"><input type="text" value="{{sex}}" disabled/></view>
+    </view>
+    <view class="col">
+        <view class="title">联系方式</view>
+        <view class="inp"><input type="text" value="{{tel}}" disabled/></view>
+    </view>
+    <view class="col">
+        <view class="title">预约项目</view>
+        <view class="inp"><input type="text" value="{{orderProject}}" disabled/></view>
+    </view>
+    <view class="col">
+        <view class="title">预约日期</view>
+        <view class="inp"><input type="text" value="{{orderDate}}" disabled/></view>
+    </view>
+    <view class="col">
+        <view class="title">预约时间段</view>
+        <view class="inp">
+            <input type="text" value="{{orderTime}}" disabled/>
+        </view>
+    </view>
+
+      <view class="col" wx:if="{{status == 2}}">
+          <view class="title">失败原因</view>
+          <view class="inp"><textarea cols="10" rows="10">{{errorMsg == '' ? '用户取消预约' : errorMsg}}</textarea></view>
+      </view>
+
+        <view wx:elif="{{status == 0 ? true : false}}">
+          <view class="btn1">
+              <view bindtap="handleSubmitSuccess" class='btn'>预约成功</view>
+          </view>
+          <view class="btn2">
+              <view bindtap="handleClick" class='btn'>预约失败</view>
+          </view>
+          <view class="btn3">
+              <view bindtap="handleSubmit" class='btn'>拉入黑名单</view>
+          </view>
+      </view>
+</view>
+<view class="wrap {{demo1?'demo2':'demo3'}}">
+    <view class="error" bindtap="handleError">
+        <image src='../../img/errorImg.png' mode='widthFix'/>
+    </view>
+    <view class="title">预约失败原因:</view>
+    <view class="content1">
+        <view class="item" bindtap="handleDemo"  wx:key="*this" wx:for="{{info}}" data-index='{{index}}'>{{item}}</view>
+    </view>
+    <textarea class="container" disabled="{{textareaIsActive}}" bindinput='handleOthers' value='{{textareaInput}}' placeholder="{{textareaIsActive ? '' : '请将字数控制在50字以内'}}">
+        <view class='container_item' wx:for="{{remark}}" wx:key="*this">{{item ? item : ''}}</view>
+    </textarea>
+    <view class="demo">
+        <view class="demo_fail" bindtap="handleFail">取消</view>
+        <view class="demo_success" bindtap="handleSuccess">确认</view>
+    </view>
+</view>

@@ -1,0 +1,162 @@
+<view class="headTitle" style="height:{{nav}}px;margin-top: {{navHeight - nav}}px" bindtap="showChangeUser"> 超级管理 </view>
+<van-popup
+  show="{{ showUser }}"
+  position="bottom"
+  custom-style="height: 20%;"
+  bind:close="onClose"
+  closeable
+  round
+>
+    <view class="userList">
+        <view class="list_item" wx:for="{{userList}}" wx:key="*this" bindtap="handleChangeUser" data-userItem="{{item}}">
+            {{item.medicalCard === 's10001' ? '管理' : item.medicalCard === 'n10002' ? '预约' : 
+              item.medicalCard === 'n10003' ? '注射' : item.medicalCard === 't10004' ? '检查' :''}}
+        </view>
+        <view class="add_item">
+            <navigator url="../super_user/super_user" hover-class="navigator-hover" open-type="navigate">
+                <image src="../../img/addUser.png" mode="widthFix"/>
+            </navigator>
+        </view>
+    </view>
+</van-popup>
+<view class="content" style="{{showQRcode || isShowNotice ? 'filter: brightness(40%);background-color:white' : ''}}">
+    <view class="content_swiper">
+        <swiper autoplay circular indicator-dots>
+            <swiper-item >
+              <image src="../../img/slideshow/swiper03.jpg" mode="widthFix"/>
+            </swiper-item>
+            <swiper-item >
+              <image src="../../img/slideshow/swiper04.png" mode="widthFix"/>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="title" bindtap="handleEditNotice">
+            <van-notice-bar
+                    left-icon="volume-o"
+                    text="{{noticeInput}}"
+            />
+    </view>
+    <!-- 项目管理 -->
+    <view class="content_item">
+        <view class="content_title">项目管理</view>
+        <view class="item_list">
+            <view class="item">
+                <navigator open-type="navigate" url="../addProject/addProject">
+                    <image src="../../img/Super-Admin/add-file.png" mode="widthFix"/>
+                    <view class="item_title">添加项目</view>
+                </navigator>
+            </view>
+            <view class="item">
+                <navigator url="../set_order/set_order">
+                    <image src="../../img/Super-Admin/found.png" mode="widthFix"/>
+                    <view class="item_title">创建预约</view>
+                </navigator>
+            </view>
+            <view class="item">
+                <navigator open-type="navigate" url="../my_project/my_project">
+                    <image src="../../img/Super-Admin/applicationManagement.png" mode="widthFix"/>
+                    <view class="item_title">我的管理</view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <!-- 人员管理 -->
+    <view class="content_item">
+        <view class="content_title">人员管理</view>
+        <view class="item_list">
+            <view class="item">
+                <navigator open-type="navigate" url="../addWorker/addWorker">
+                    <image src="../../img/Super-Admin/addPerson.png" mode="widthFix"/>
+                    <view class="item_title">创建管理</view>
+                </navigator>
+            </view>
+            <view class="item">
+                <navigator url="../user_info/user_info">
+                    <image src="../../img/Super-Admin/information.png" mode="widthFix"/>
+                    <view class="item_title">用户信息</view>
+                </navigator>
+            </view>
+            <view class="item">
+                <navigator open-type="navigate" url="../blacklist/blacklist">
+                    <image src="../../img/Super-Admin/unlocking.png" mode="widthFix"/>
+                    <view class="item_title">解除拉黑</view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <!-- 其他 -->
+    <view class="content_item">
+        <view class="content_title">其他</view>
+        <view class="item_list">
+            <view class="item">
+                <navigator open-type="navigate" url="../data_information/data_information">
+                    <image src="../../img/Super-Admin/dataExport.png" mode="widthFix"/>
+                    <view class="item_title">数据导出</view>
+                </navigator>
+            </view>
+            <view class="item">
+                <navigator open-type="navigate" url="../super_edit/super_edit">
+                    <image src="../../img/Super-Admin/edit.png" mode="widthFix"/>
+                    <view class="item_title">编辑</view>
+                </navigator>
+            </view>
+            <view class="item">
+                <view class='QRcode' bindtap='handleShowQRcode'>
+                    <image src="../../img/Super-Admin/barcode.png" mode="widthFix"/>
+                    <view class="item_title">小程序码</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="content_mag">
+        <p>用户说明：</p>
+        <p>1.用户可点击“创建预约”图标进入预约项目的创建，并设置预约项目、日期、时间、以及可预约数量。</p>
+        <p>2.点击“我的管理”管理已创建的预约以及已完成的预约项目。</p>
+        <p>3.“护士信息”可对医院工作人员的信息进行管理。</p>
+        <p>4.“解除拉黑”可对已拉黑的患者名单进行管理。</p>
+    </view>
+</view>
+
+<!-- 小程序码弹出框 -->
+<view wx:if="{{showQRcode}}" class='showQRcode'>
+    <view class='codeHeader'>
+        <view class='code_title'>{{selectListUser ? '生成小程序码' : adminQRCodeImg ? '管理端程序码' : '患者端程序码'}}</view>
+        <view class='code_error' bindtap='handleShowQRcode'>
+            <image src='/img/Super-Admin/error.png' mode='widthFix'/>
+        </view>
+    </view>
+    <view class='selectUser' wx:if="{{selectListUser}}">
+        <view class='admin' bindtap='handleSelectAdmin'>
+            <view class='admin_title'>管理端程序码</view>
+            <view class='admin_img'>
+                <image src='../../img/arrows_right.png' mode='widthFix'/>
+            </view>
+        </view>
+        <view class='patient' bindtap='handleSelectPatient'>
+            <view class='patient_title'>患者端程序码</view>
+            <view class='patient_img'>
+                <image src='../../img/arrows_right.png' mode='widthFix'/>
+            </view>
+        </view>
+    </view>
+    <view class='QRCode' wx:if="{{!selectListUser}}">
+        <view class='QRCode_admin' wx:if="{{adminQRCodeImg}}">
+            <image src='https://xyeyyhyxk.top:8881/createCode/admin' mode="widthFix" bindtap='handleClickAdminQRcode'></image>
+        </view>
+        <view class='QRCode_patient' wx:if="{{!adminQRCodeImg}}">
+            <image src='https://xyeyyhyxk.top:8881/createCode/patient' mode="widthFix" bindtap='handleClickPatientQRcode'></image>
+        </view>
+        <view class='img_btn' bindtap='handleBack'>返回</view>
+    </view>
+</view>
+
+<!-- 修改公告弹框 -->
+<view class="notice" wx:if="{{isShowNotice}}">
+    <view class="notice_img" bindtap="handleClose">
+        <image src="/img/Super-Admin/error.png" mode="widthFix"></image>
+    </view>
+    <view class="notice_input">
+        <input type="text" value="{{noticeInput}}" bindinput="handleNoticeInput"/>
+        <view class="notice_confirm" bindtap="handleSubmitNotice">确认</view>
+    </view>
+</view>

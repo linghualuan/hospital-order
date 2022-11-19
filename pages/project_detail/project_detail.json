@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SelectOrder":"../../conponents/SelectOrder/SelectOrder"
+  },
+  "navigationBarTitleText": "创建预约详情"
+
+}

@@ -1,0 +1,29 @@
+<view class="content">
+    <view class="title">
+        <view class="title_img">
+            <image mode="widthFix" src="../../img/hospital.png"/>
+        </view>
+        <view class="title_name">
+            中南大学湘雅二医院
+        </view>
+    </view>
+    <view class="con_top">
+        <view class="top_project">甲状腺静态显像</view>
+        <view class="top_date">
+            日期 :
+            <text>2021-11-25至2021-01-15</text>
+        </view>
+        <view class="top_time" wx:for="{{time}}" wx:key="*this" data-index="{{index}}">
+            <view class="title">
+                <view  wx:if="{{index === 0 ? true : false}}">
+                  预约时间段 :
+                </view>
+            </view>
+            <view class="time">
+                <text>{{item.a}}</text>
+            </view>
+            <view class='number'>{{item.num}}人</view>
+        </view>
+        <view class='btn' bindtap='handleHome'>返回上一页面</view>
+    </view>
+</view>

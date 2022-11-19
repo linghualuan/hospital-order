@@ -1,0 +1,29 @@
+<view class="tabs">
+    <view wx:if="{{userInfo.length}}">
+        <view class="item" wx:for="{{userInfo}}" wx:key="*this" data-index='{{index}}'>
+            <navigator url="../my_inspect_detail/my_inspect_detail?id={{item.id}}&demo={{0}}" open-type="navigate">
+                <view class="top">
+                    <view class="top_img">
+                        <image src='../../img/hospital.png' mode='widthFix'></image>
+                    </view>
+                    <view class="top_title">
+                        <view class="title_address">中南大学湘雅二医院</view>
+                        <view class="title_project">{{item.project}}</view>
+                    </view>
+                    <view class="top_icon">
+                        <image mode="widthFix" src="../../img/enterInto.png"/>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <view class="btm_number">
+                        状态:{{item.scanState===1 ? '成功' : (item.scanState===2 ? '失败' : '已取消')}}
+                    </view>
+                    <view class="btm_number">日期:{{item.date}}</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view wx:if="{{!userInfo.length}}" class='noData'>
+        <image src='../../img/NoData.png' mode="widthFix"/>
+    </view>
+</view>

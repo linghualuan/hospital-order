@@ -1,0 +1,12 @@
+<view class="img">
+    <image src="../../img/authorization.png" mode="widthFix"/>
+</view>
+<view class="title">
+    微信授权页面
+</view>
+<view class="title_content">
+    点击下方按钮进行授权登录，成功后跳转页面
+</view>
+<view class="btn">
+    <button bindtap="handleUserLoad">授权登录</button>
+</view>

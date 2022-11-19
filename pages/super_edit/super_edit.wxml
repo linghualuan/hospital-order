@@ -1,0 +1,7 @@
+<view class="edit_title">
+    编辑用户使用说明
+</view>
+<view class="content">
+    <textarea name="" id="" cols="30" rows="10" bindinput="handleInput" value="{{content}}" maxlength="2000"></textarea>
+</view>
+<view class="btn" bindtap="handleSubmit">提交</view>

@@ -1,0 +1,40 @@
+<view class='number'>
+  <view class='number_title'>项目名称</view>
+  <view class='number_int'>
+    <input type="text" bindinput="handleProject" placeholder="名称" value='{{orderProject}}'/>
+  </view>
+</view>
+
+<view class='number'>
+  <view class='number_title'>注射后等待时长</view>
+  <view class='number_int'>
+    <input type="text" value="{{pendWait}}" bindinput="handlePendWait" placeholder="单位/分钟"/>
+  </view>
+</view>
+
+<view class='number'>
+  <view class='number_title'>检查预计时长</view>
+  <view class='number_int'>
+    <input type="text" value="{{pendCheck}}" bindinput="handlePendCheck" placeholder="单位/分钟"/>
+  </view>
+</view>
+
+<view class='number'>
+  <view class='number_title'>可预约人数</view>
+  <view class='number_int'>
+    <picker mode="selector" value="{{index}}" range="{{peopleNum}}" bindchange="handleOrderNumber">
+      <view class="picker">
+        <view class='input' style="{{orderPeople!=='' ? '' : 'color:#888'}}">{{orderPeople!=='' ? orderPeople + '人' : '可预约人数'}}</view>
+      </view>
+    </picker>
+  </view>
+</view>
+
+<view class='number'>
+  <view class='number_title'>备注</view>
+  <view class='number_int'>
+    <textarea bindinput="handleNote" placeholder="备注" value='{{note}}'></textarea>
+  </view>
+</view>
+
+<view class='submit' bindtap='handleSubmit'>提交</view>

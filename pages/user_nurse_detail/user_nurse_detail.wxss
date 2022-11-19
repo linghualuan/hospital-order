@@ -1,0 +1,48 @@
+page .user_wrap {
+  display: flex;
+  flex-direction: column;
+}
+page .user_wrap .col {
+  display: flex;
+  margin-top: 45rpx;
+}
+page .user_wrap .col .title {
+  flex: 2;
+  text-align: right;
+  font-family: 幼圆;
+}
+page .user_wrap .col .inp {
+  flex: 5;
+}
+page .user_wrap .col .inp input {
+  width: 400rpx;
+  height: 50rpx;
+  border-radius: 20rpx;
+  background-color: white;
+  margin-left: 30rpx;
+  padding-left: 30rpx;
+}
+page .submit {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: white;
+  background-color: #6bdccc;
+  margin: 40rpx auto;
+  text-align: center;
+  font-size: 40rpx;
+  border-radius: 20rpx;
+  font-family: 幼圆;
+}
+page .delete {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: white;
+  background-color: red;
+  margin: 40rpx auto;
+  text-align: center;
+  font-size: 40rpx;
+  border-radius: 20rpx;
+  font-family: 幼圆;
+}

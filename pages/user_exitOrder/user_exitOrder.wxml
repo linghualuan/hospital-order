@@ -1,0 +1,26 @@
+<view class='container'>
+    <view class="item" wx:for="{{userInfo}}" :key='*this'>
+        <view class="top">
+            <view class="top_img">
+                <image mode="widthFix" src="../../img/Super-Admin/block.png"/>
+            </view>
+            <view class="top_title">
+                <view class="title_address">{{item.orderProject}}</view>
+                <view class="title_project">姓名：{{item.remark}}</view>
+            </view>
+            <view class="top_icon" bindtap="handleRelieve"  data-id="{{item.id}}" data-status='0' data-index='{{index}}'>
+                拒绝
+            </view>
+            <view class="top_icon" bindtap="handleRelieve"  data-id="{{item.id}}" data-status='1' data-index='{{index}}' style="background-color: #6dbbbc; margin-left: 20rpx;">
+                同意
+            </view>
+        </view>
+        <view class="bottom">
+            <view class="btm_number">卡号:{{item.medicalCard}}</view>
+            <view class="btm_name">{{item.orderDate}} {{item.orderTime}}</view>
+        </view>
+    </view>
+    <view class='noData' wx:if="{{userInfo.length == 0}}">
+        <image src='/img/NoData.png' mode="widthFix"/>
+    </view>
+</view>

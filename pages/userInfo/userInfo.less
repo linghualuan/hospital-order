@@ -1,0 +1,78 @@
+page{
+    background-color: #FAF2F9;
+    position: relative;
+    .content{
+        display: flex;
+        flex-direction: column;
+        width:100vw;
+        height:100vh;
+        .img{
+            position: fixed;
+            height:100%;
+            width:100%;
+            z-index: -3;
+            image{
+                height:100%;
+                width:100%;
+            }
+        }
+        .wrap{
+            width:80vw;
+            height:800rpx;
+            background-color: aqua;
+            padding:50rpx 0;
+            margin:100rpx auto;
+            border-radius: 50rpx;
+            background-color: rgba(255, 255, 255, .5);
+            backdrop-filter: blur(5px);
+            .col{
+                margin:30rpx 40rpx;
+                display: flex;
+                flex-direction: column;
+                .title{
+                    flex:2;
+                    text-indent: 10rpx;
+                    font-size: 28rpx;
+                    color:#666;
+                    padding-right:30rpx;
+                    margin-bottom: 10rpx;
+                }
+                .inp{
+                    flex:5;
+                    height:60rpx;
+                    input{
+                        background-color: white;
+                        padding-left:30rpx;
+                        height:100%;
+                        border-radius: 8rpx;
+                        filter:opacity(70%);
+                        box-shadow: 4rpx 4rpx 4rpx #ccc;
+                    }
+                    .picker{
+                        height:60rpx;
+                        .input{
+                            background-color: white;
+                            padding-left:30rpx;
+                            height:100%;
+                            border-radius: 8rpx;
+                            filter:opacity(70%);
+                            color:#888;
+                            box-shadow: 4rpx 4rpx 4rpx #ccc;
+                        }
+                    }
+                }
+            }
+            .btn{
+                width:300rpx;
+                height:70rpx;
+                color:black;
+                border-radius: 35rpx;
+                text-align: center;
+                line-height: 70rpx;
+                margin:0 auto;
+                margin-top:150rpx;
+                background-color: white;
+            }
+        }
+    }
+}

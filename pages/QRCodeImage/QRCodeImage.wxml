@@ -1,0 +1,4 @@
+<view class="wrap">
+    <view class="title">请扫描二维码</view>
+    <image src="{{url}}" id='img'></image>
+</view>

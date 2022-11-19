@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Tabs":"../../conponents/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "用户信息"
+}

@@ -1,0 +1,268 @@
+page{
+    background-color: #FAF2F9;
+    position: relative;
+    font-family: '幼圆';
+    .headTitle {
+        text-align: center;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .userList {
+        padding: 30rpx;
+        .list_item {
+            width: 120rpx;
+            height: 120rpx;
+            line-height: 120rpx;
+            text-align: center;
+            color: white;
+            float: left;
+            border-radius: 50%;
+            margin-right: 20rpx;
+            background-color: #6dbbbc;
+        }
+        .add_item {
+            width: 120rpx;
+            float: left;
+            image {
+                width: 100%;
+            }
+        }
+    }
+    .content{
+        width:100vw;
+        .content_swiper{
+            swiper{
+                height:calc(100vw * 380 / 1100);
+                padding:0 20rpx;
+                image{
+                    width:100%;
+                    border-radius: 10rpx;
+                }
+            }
+        }
+        .title{
+            width:94%;
+            // height:50rpx;
+            margin:10rpx auto;
+            // font-size: 35rpx;
+            // line-height: 50rpx;
+            // border:4rpx solid #F8C640;
+            // border-radius: 25rpx;
+            // padding-left:20rpx;
+
+            // overflow: hidden;
+            // text-overflow:ellipsis;
+            // white-space: nowrap;
+        }
+        .content_item{
+            width:92%;
+            background-color: white;
+            margin-right:4%;
+            margin-left:4%;
+            margin-bottom: 10rpx;
+            padding-top: 20rpx;
+            border-radius: 20rpx;
+            .content_title {
+                text-align: left;
+                padding-left: 20rpx;
+                font-size: 30rpx;
+                color: #aaa;
+            }
+            .item_list {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .item{
+                    flex:1;
+                    padding-top:20rpx;
+                    width:25%;
+                    font-size:30rpx;
+                    margin-bottom:30rpx;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    navigator{
+                        height:100%;
+                        width:100%;
+                        text-align: center;
+                        image{
+                            width:30%;
+                        }
+                        .item_title{
+                            text-align: center;
+                        }
+                    }
+                    .QRcode{
+                        height:100%;
+                        width:100%;
+                        text-align: center;
+                        image{
+                            width:30%;
+                        }
+                        .item_title{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .content_mag{
+            width:92%;
+            background-color: white;
+            margin:0 auto;
+            border-radius: 20rpx;
+            p{
+                display: block;
+                margin:20rpx;
+                font-size:35rpx;
+            }
+        }
+    }
+    .showQRcode{
+        position: absolute;
+        top:40vw;
+        left:10vw;
+        width:80vw;
+        height:550rpx;
+        background-color: white;
+        border-radius: 10rpx;
+        .codeHeader{
+            height:10vw;
+            position: relative;
+            .code_title{
+                margin-top:20rpx;
+                font-size: 40rpx;
+                text-align: center;
+            }
+            .code_error{
+                position: absolute;
+                right:10rpx;
+                top:0;
+                image{
+                    width:50rpx;
+                    height:50rpx;
+                }
+            }
+        }
+        .selectUser {
+            .admin {
+                width: 80%;
+                height: 150rpx;
+                background-color: #3399CC;
+                display: flex;
+                align-items: center;
+                border-radius: 20rpx;
+                margin: 40rpx auto;
+                font-size: 40rpx;
+                .admin_title {
+                    flex: 3;
+                    color: white;
+                    text-align: center;
+                }
+                .admin_img {
+                    flex: 1;
+                    image {
+                        width: 50%;
+                    }
+                }
+            }
+            .patient {
+                width: 80%;
+                height: 150rpx;
+                background-color: #99CCCC;
+                display: flex;
+                align-items: center;
+                border-radius: 20rpx;
+                margin: 40rpx auto;
+                .patient_title {
+                    flex: 3;
+                    color: white;
+                    text-align: center;
+                }
+                .patient_img {
+                    flex: 1;
+                    image {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+        .QRCode {
+            text-align: center;
+            .QRCode_admin {
+                width: 300rpx;
+                height: 300rpx;
+                margin: 0 auto;
+                image {
+                    width: 100%;
+                }
+            }
+            .QRCode_patient {
+                width: 300rpx;
+                height: 300rpx;
+                margin: 0 auto;
+                image {
+                    width: 100%;
+                }
+            }
+            .img_btn {
+                width: 200rpx;
+                height: 80rpx;
+                background-color: #66CCFF;
+                margin: 30rpx auto;
+                line-height: 80rpx;
+                text-align: center;
+                border-radius: 20rpx;
+            }
+        }
+    }
+    .notice {
+        width: 90vw;
+        height: 300rpx;
+        padding-bottom: 30rpx;
+        margin: 0 auto;
+        background-color: white;
+        position: absolute;
+        top: 300rpx;
+        left: 50%;
+        border-radius: 20rpx;
+        transform: translateX(-45vw);
+        .notice_img {
+            width: 50rpx;
+            height: 50rpx;
+            position: absolute;
+            top: 10rpx;
+            right: 10rpx;
+            image {
+                width: 45rpx;
+            }
+        }
+        .notice_input {
+            position: absolute;
+            top: 80rpx;
+            width: 100%;
+            input {
+                border: 4rpx solid #ccc;
+                height: 80rpx;
+                border-radius: 40rpx;
+                margin-left: 30rpx;
+                margin-right: 30rpx;
+                padding-left: 30rpx;
+                padding-right: 30rpx;
+            }
+            .notice_confirm {
+                width: 200rpx;
+                height: 80rpx;
+                line-height: 80rpx;
+                text-align: center;
+                color: white;
+                border-radius: 40rpx;
+                background-color: #66CCFF;
+                margin: 0 auto;
+                margin-top: 40rpx;
+            }
+        }
+    }
+  }

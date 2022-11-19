@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "Tabs":"../../conponents/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "我的叫号",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

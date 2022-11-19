@@ -1,0 +1,41 @@
+<view class="content">
+    <view class="title">
+        <view class="title_img">
+            <image mode="widthFix" src="../../img/hospital.png" />
+        </view>
+        <view class="title_name">中南大学湘雅二医院</view>
+    </view>
+    <view class="con_top">
+        <view class="top_project">{{orderProject}}</view>
+        <view class="top_date">
+            <view class='top_select' bindtap="showDate">
+                <view class='top_select_date'>{{datePost}}</view>
+                <view class='top_select_icon'>
+                    <text class='iconfont icon-riqi'></text>
+                </view>
+            </view>
+            <!-- 弹框日期 -->
+            <van-popup show="{{showDate}}" position="bottom" custom-style="height: 50%" bind:close="onClose">
+                <van-picker columns="{{ types }}" bind:change="onDataChange" />
+            </van-popup>
+        </view>
+        <view class='list' wx:for="{{time}}" wx:key="*this" data-index="{{index}}">
+            <view class='item'>
+                <view class="item_time">
+                    <view class='time_num'>{{item.orderTime}}</view>
+                </view>
+                <view class="item_queue">
+                    <view class='queue_title'>总预约数量 :</view>
+                    <view class='queue_inp'>
+                        <input type="text" value='{{item.allNumber}}' bindinput='handleInp' />
+                    </view>
+                </view>
+                <view class="item_number">
+                    <view class='number_title'>已预约 :</view>
+                    <view class='number_num'>{{item.orderNumber}}</view>
+                </view>
+            </view>
+        </view>
+        <view class='submit' bindtap='handleSubmit'>确认提交</view>
+    </view>
+</view>

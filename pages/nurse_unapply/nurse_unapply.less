@@ -1,0 +1,142 @@
+page{
+    background-color: #FAF2F9;
+    .content{
+        position: relative;
+        width:100vw;
+        height:100vh;
+        display: flex;
+        flex-direction: column;
+        .col{
+            margin:20rpx 40rpx;
+            display: flex;
+            height:60rpx;
+            .title{
+                flex:2;
+                font-size: 36rpx;
+                height:60rpx;
+                line-height: 60rpx;
+                text-align: right;
+                padding-right:30rpx;
+            }
+            .inp{
+                flex:5;
+                input{
+                    height:60rpx;
+                    background-color: white;
+                    border-radius: 20rpx;
+                    padding-left:30rpx;
+                    box-shadow: 4rpx 4rpx 4rpx #ccc;
+                }
+                textarea{
+                    width:87%;
+                    background-color: white;
+                    border-radius: 20rpx;
+                    padding:10rpx 30rpx;
+                    box-shadow: 4rpx 4rpx 4rpx #ccc;
+                }
+            }
+        }
+        .btn1{
+            margin-top:50rpx;
+            button{
+                color:white;
+                border-radius: 25rpx;
+                background-color: #6DBBB4;
+            }
+        }
+        .btn2{
+            margin-top:50rpx;
+            button{
+                color:white;
+                border-radius: 25rpx;
+                background-color: #FF0000;
+            }
+        }
+        .btn3{
+            margin-top:50rpx;
+            button{
+                color:black;
+                border-radius: 25rpx;
+                background-color:#DCDCDC;
+            }
+        }
+    }
+    .demo2{
+        display: block;
+    }
+    .demo3{
+        display: none;
+    }
+    .wrap{
+        top:120rpx;
+        left:10vw;
+        width:80vw;
+        // height:66vh;
+        padding-bottom:30rpx;
+        background-color: #eee;
+        position: absolute;
+        border-radius: 10rpx;
+        .error{
+            position: absolute;
+            top:0;
+            right:0;
+            font-size: 50rpx;
+            width:50rpx;
+            height:50rpx;
+            line-height: 50rpx;
+            text-align: center;
+            color:white;
+            background-color: brown;
+        }
+        .title{
+            width:50%;
+            font-size: 36rpx;
+            padding:40rpx;
+        }
+        .content1{
+            display: flex;
+            padding:0 40rpx;
+            .item{
+                flex:1;
+                // padding:10rpx;
+                height:40rpx;
+                margin:10rpx;
+                font-size: 30rpx;
+                border-radius: 10rpx;
+                line-height: 40rpx;
+                text-align: center;
+                background-color: #ccc;
+            }
+        }
+        .container{
+            padding:20rpx;
+            width:90%;
+            height:400rpx;
+            margin:50rpx auto;
+            margin-top:40rpx;
+            background-color: white;
+        }
+        .demo{
+            padding:0 40rpx;
+            display: flex;
+            text-align: center;
+            color:white;
+            .demo_fail{
+                flex:1;
+                height:60rpx;
+                line-height: 60rpx;
+                background-color: #bbb;
+                margin-right:20rpx;
+                border-radius: 30rpx;
+            }
+            .demo_success{
+                flex:1;
+                height:60rpx;
+                line-height: 60rpx;
+                margin-left:20rpx;
+                background-color: #6dbbbc;
+                border-radius: 30rpx;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+<Tabs tabs="{{tabs}}" binditemTabChange="handleItemTabChange">
+    <block wx:if="{{tabs[0].isActive}}">
+        <view wx:if="{{userInfoUnpassed.length}}">
+                <view class="item" wx:for="{{userInfoUnpassed}}" wx:key="*this">
+                    <view class="top">
+                    <view class="top_img">
+                        <image mode="widthFix" src="../../img/Super-Admin/block.png"/>
+                    </view>
+                    <view class="top_title">
+                        <view class="title_address">中南大学湘雅二医院</view>
+                        <view class="title_project">姓名：{{item.name}}</view>
+                    </view>
+                    <view class="top_icon" bindtap="handleRelieve"  data-index="{{index}}">
+                        解除
+                    </view>
+                </view>
+                <view class="bottom">
+                    <view class="btm_number">卡号:{{item.medicalCard}}</view>
+                    <view class="btm_name">联系方式:{{item.tel}}</view>
+                </view>
+            </view>
+            </view>
+            <view wx:if="{{!userInfoUnpassed.length}}" class='noData'>
+                <image src='/img/NoData.png' mode="widthFix"/>
+            </view>
+        </block>
+    <block wx:if="{{tabs[1].isActive}}">
+        <view wx:if="{{userInfo.length}}">
+            <view class="item" wx:for="{{userInfo}}" wx:key="*this">
+                <view class="top">
+                    <view class="top_img">
+                        <image mode="widthFix" src="../../img/Super-Admin/block.png"/>
+                    </view>
+                    <view class="top_title">
+                        <view class="title_address">中南大学湘雅二医院</view>
+                        <view class="title_project">姓名：{{item.name}}</view>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <view class="btm_number">卡号:{{item.medicalCard}}</view>
+                    <view class="btm_name">联系方式:{{item.tel}}</view>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{!userInfo.length}}" class='noData'>
+            <image src='/img/NoData.png' mode="widthFix"/>
+        </view>
+    </block>
+</Tabs>
+

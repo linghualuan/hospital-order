@@ -1,0 +1,109 @@
+page{
+    background-color: #FAF2F9;
+    padding-bottom:40rpx;
+    .content{
+        display: flex;
+        flex-direction: column;
+        .col{
+            margin:20rpx 40rpx;
+            display: flex;
+            height:60rpx;
+            .title{
+                flex:2;
+                height:60rpx;
+                line-height: 60rpx;
+                font-size: 36rpx;
+                text-align: right;
+                padding-right:30rpx;
+            }
+            .inp{
+                flex:5;
+                input{
+                    height:60rpx;
+                    background-color: white;
+                    border-radius: 10rpx;
+                    padding-left:30rpx;
+                    box-shadow: 4rpx 4rpx 4rpx #ccc;
+                    border-radius: 20rpx;
+                }
+                textarea{
+                    width:87%;
+                    background-color: white;
+                    border-radius: 10rpx;
+                    padding:10rpx 30rpx;
+                    box-shadow: 4rpx 4rpx 4rpx #ccc;
+                    border-radius: 20rpx;
+                }
+            }
+            .radio{
+                flex:5;
+                display: flex;
+                align-items: center;
+                position: relative;
+                label{
+                    flex:1;
+                    height:100%;
+                    font-size: 25rpx;
+                    padding-left:10rpx;
+                    radio{
+                        transform: scale(0.5);
+                    }
+                    text{
+                        margin-left:-15rpx;
+                    }
+                }
+            }
+        }
+        .col_buwei{
+            .title{
+                display: flex;
+                .title_name{
+                    text-align: right;
+                    flex:2;
+                }
+                .title_item{
+                    flex:5;
+                    display: flex;
+                    flex-direction: column;
+                    // padding:0 10rpx;
+                    radio-group{
+                        flex:1;
+                        display: flex;
+                        label{
+                            flex:1;
+                            font-size: 25rpx;
+                            radio{
+                                transform: scale(0.5,0.5);
+                            }
+                        }
+                    }
+                    .inp{
+                        flex:1;
+                        input{
+                            background-color: white;
+                            border-radius: 10rpx;
+                            padding-left:30rpx;
+                        }
+                    }
+                }
+            }
+
+        }
+        .btn1{
+            margin-top:50rpx;
+            button{
+                color:white;
+                border-radius: 25rpx;
+                background-color: #6DBBB4;
+            }
+        }
+        .btn2{
+            margin-top:50rpx;
+            button{
+                color:white;
+                border-radius: 25rpx;
+                background-color: #FF0000;
+            }
+        }
+    }
+}

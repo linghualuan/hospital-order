@@ -1,0 +1,111 @@
+page{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+view{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+image{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+text{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+navigator{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+page{
+    background-color: #6DBBBC;
+    padding:30rpx;
+    .content{
+        position: relative;
+        .title{
+            display: flex;
+            height:60rpx;
+            .title_img{
+                flex:1;
+                image{
+                    width:100%;
+                    height:100%;
+                }
+            }
+            .title_name{
+                padding-left:30rpx;
+                flex:13;
+                color:white;
+            }
+        }
+        .con_top{
+            background-color: white;
+            border-bottom:#6dbbbc 5rpx solid;
+            text-align: center;
+            font-size: 35rpx;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-top:20rpx;
+            border-top-left-radius: 20rpx;
+            border-top-right-radius: 20rpx;
+            border-bottom-left-radius: 20rpx;
+            border-bottom-right-radius: 20rpx;
+            position: relative;
+            .top_project{
+                flex:1;
+                font-size: 50rpx;
+                margin:20rpx 0;
+            }
+            .top_date{
+                flex:1;
+                margin:20rpx 0;
+                text{
+                    color:#F26D07;
+                    font-size: 40rpx;
+                }
+            }
+            .top_time{
+                flex:1;
+                display: flex;
+                padding:0 20rpx;
+                align-items: center;
+                height:50rpx;
+                line-height: 50rpx;
+                margin:10rpx 0;
+                .title{
+                    flex:1.5;
+                }
+                .time{
+                    color:#F26D07;
+                    flex:2;
+                    text{
+                        font-size: 40rpx;
+                    }
+                }
+                .number{
+                    flex:1;
+                    color:#F26D07;
+                    font-size: 40rpx;
+                    text-align: right;
+                    padding:0 40rpx;
+                }
+            }
+            .btn{
+                background-color:#6dbccc;
+                width:300rpx;
+                height:70rpx;
+                line-height: 70rpx;
+                margin:40rpx auto;
+                color:white;
+                border-radius: 35rpx;
+            }
+        }
+    }
+}

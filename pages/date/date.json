@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "SelectDate":"../../conponents/SelectDate/SelectDate"
+  },
+  "navigationBarTitleText": "预约"
+}

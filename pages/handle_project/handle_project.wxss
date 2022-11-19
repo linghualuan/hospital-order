@@ -1,0 +1,144 @@
+page {
+  padding-bottom: 30rpx;
+}
+page .van-button--block {
+  width: 100%;
+}
+page .project_name {
+  font-size: 40rpx;
+  font-weight: 600;
+  width: 100vw;
+  height: 60rpx;
+  margin: 20rpx auto;
+  text-align: center;
+}
+page .set_progect {
+  font-size: 35rpx;
+  margin-top: 20rpx;
+  margin-left: 35rpx;
+}
+page .project_wrap .calendar {
+  width: 100%;
+  height: 70vh;
+}
+page .project_wrap .start {
+  position: relative;
+  display: flex;
+  margin: 30rpx 30rpx;
+}
+page .project_wrap .start .start_time {
+  flex: 4;
+  text-align: right;
+  font-size: 38rpx;
+  font-family: '幼圆';
+}
+page .project_wrap .start .startInput {
+  flex: 7;
+  width: 100%;
+  height: 50rpx;
+  background-color: white;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 20rpx;
+}
+page .project_wrap .start image {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  top: 5rpx;
+  right: 25rpx;
+}
+page .project_wrap .subscribe_wrap {
+  margin-top: 40rpx;
+  margin-left: 90rpx;
+  padding: 8rpx;
+  display: flex;
+  font-family: '幼圆';
+}
+page .project_wrap .subscribe_wrap .time_wrap {
+  display: flex;
+}
+page .project_wrap .subscribe_wrap .time_wrap .time_left {
+  margin-left: 8rpx;
+}
+page .project_wrap .subscribe_wrap .time_wrap .time_left .picker {
+  height: 50rpx;
+  width: 200rpx;
+  border-radius: 15rpx;
+  text-align: center;
+  background-color: white;
+}
+page .project_wrap .subscribe_wrap .time_wrap .time_right .picker {
+  height: 50rpx;
+  width: 200rpx;
+  border-radius: 15rpx;
+  text-align: center;
+  background-color: white;
+}
+page .project_wrap .number_wrap {
+  display: flex;
+  padding: 8rpx;
+  margin-top: 20rpx;
+  margin-left: 90rpx;
+}
+page .project_wrap .number_wrap .van-stepper {
+  margin-top: -10rpx;
+  margin-right: 23rpx;
+}
+page .project_wrap .number_wrap .input_class {
+  background-color: white;
+}
+page .project_wrap .number_wrap .plus_class {
+  background-color: white;
+}
+page .project_wrap .number_wrap .minus_class {
+  background-color: white;
+}
+page .project_wrap .consult_wrap {
+  display: flex;
+  padding: 8rpx;
+  margin-top: 20rpx;
+  margin-left: 90rpx;
+}
+page .project_wrap .consult_wrap .phone_number {
+  width: 340rpx;
+  height: 40rpx;
+  background-color: white;
+  font-size: 30rpx;
+  padding-left: 110rpx;
+  line-height: 40rpx;
+  margin-left: 7rpx;
+  border-radius: 20rpx;
+}
+page .add_btn {
+  height: 50rpx;
+  width: 200rpx;
+  margin: 0 auto;
+  background-color: #ffcb3d;
+  border-radius: 25rpx;
+  margin-top: 50rpx;
+}
+page .add_btn .item {
+  font-size: 30rpx;
+  text-align: center;
+  color: white;
+  height: 50rpx;
+  width: 200rpx;
+  line-height: 50rpx;
+}
+page .creat_btn {
+  width: 250rpx;
+  height: 70rpx;
+  margin: 0 auto;
+  background-color: #6dbccc;
+  margin-top: 100rpx;
+  border-radius: 35rpx;
+}
+page .creat_btn .item {
+  height: 70rpx;
+  width: 250rpx;
+  color: white;
+  text-align: center;
+  line-height: 70rpx;
+}

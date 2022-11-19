@@ -1,0 +1,121 @@
+<view class="headTitle" style="height:{{nav}}px;margin-top: {{navHeight - nav}}px" bindtap="showChangeUser">
+    检查技师
+</view>
+<van-popup
+  show="{{ showUser }}"
+  position="bottom"
+  custom-style="height: 20%;"
+  bind:close="onClose"
+  closeable
+  round
+>
+    <view class="userList">
+        <view class="list_item" wx:for="{{userList}}" wx:key="*this" bindtap="handleChangeUser" data-userItem="{{item}}">
+            {{item.medicalCard === 's10001' ? '管理' : item.medicalCard === 'n10002' ? '预约' : 
+              item.medicalCard === 'n10003' ? '注射' : item.medicalCard === 't10004' ? '检查' :''}}
+        </view>
+        <view class="add_item">
+            <navigator url="../super_user/super_user" hover-class="navigator-hover" open-type="navigate">
+                <image src="../../img/addUser.png" mode="widthFix"/>
+            </navigator>
+        </view>
+    </view>
+</van-popup>
+
+<view class='header'>
+    <view class='header_search'>
+        <van-search placeholder="请输入搜索关键词" bind:change='handleSearch' />
+    </view>
+    <view class='header_select'>
+        <text class='iconfont icon-shaixuan' bindtap='showSelectPopup'></text>
+    </view>
+</view>
+
+<van-popup
+    show="{{ selectShow }}"
+    position="bottom"
+    custom-style="height: 50%;"
+    bind:close="onCloseSelect"
+    closeOnClickOverlay='{{false}}'
+    custom-class='shaixuan'>
+    <view class='select_project'>
+        <view class='select_project_title'>项目名称</view>
+        <view class='select_project_input'><input type="text" bindinput="getUserInput" value='{{selectProject}}'/></view>
+    </view>
+    <view class="select_date" bindtap='showDateSelect'>
+        <view class='select_date_title'>日期</view>
+        <view class="select_date_container">
+            {{date ? date : '选择日期'}} <text class="iconfont icon-riqi"></text>
+        </view>
+    </view>
+
+    <view class='select_state'>
+        <view class='select_state_title'>状态</view>
+        <view class='select_state_list'>
+            <view class='select_state_list_item' style='{{item.isActive ? "background-color: #6dbbbc; color: white;" : ""}}' wx:for="{{selectCondition}}" :key='*this' bindtap='clickItem' data-item='{{item}}'>{{item.value}}</view>
+        </view>
+    </view>
+    <view class='submit'>
+        <view class='submit_confirm' bindtap='submit'>确认</view>
+    </view>
+</van-popup>
+
+<van-calendar
+    show="{{ showDateSelect }}"
+    bind:close="onCloseDate"
+    bind:confirm="onConfirmDate"
+    color= '#6dbbbc'
+    min-date='{{minDate}}'
+/>
+
+<view class='tabs'>
+    <view class='tabs_item'>
+        <view wx:if="{{userInfo.length}}">
+            <view class="item" wx:for="{{userInfo}}" wx:key="item.id">
+            <!-- ------------------------------------------------------ -->
+                <view wx:if='{{item.scanState == 0}}'>
+                  <navigator url='../technician_check/technician_check?id={{item.id}}&relId={{item.relId}}&status={{item.scanState}}' open-type="navigate">
+                      <view class="top">
+                      <view class="top_img"> {{item.scanNumber}} </view>
+                      <view class="top_title">
+                          <view class="title_address">中南大学湘雅二医院</view>
+                          <view class="title_project">{{item.project}}</view>
+                      </view>
+                      <view class="top_icon">
+                          <image mode="widthFix" src="../../img/enterInto.png"/>
+                      </view>
+                  </view>
+                  <view class="bottom">
+                      <view class="btm_name">姓名:{{item.name}}</view>
+                      <view class="btm_number">排序序号:{{item.scanNumber}}</view>
+                      <view class="btm_name">检查时间:{{item.turnTime}}</view>
+                  </view>
+                  </navigator>
+                </view>
+          <!-- ------------------------------------------------------ -->
+                <view wx:elif='{{item.scanState != 0}}'>
+                    <navigator url='../technician_uncheck/technician_uncheck?id={{item.id}}&relId={{item.relId}}&status={{item.scanState}}' open-type="navigate">
+                      <view class="top">
+                      <view class="top_img"> {{item.scanNumber}} </view>
+                      <view class="top_title">
+                          <view class="title_address">中南大学湘雅二医院</view>
+                          <view class="title_project">{{item.project}}</view>
+                      </view>
+                      <view class="top_icon">
+                          <image mode="widthFix" src="../../img/enterInto.png"/>
+                      </view>
+                  </view>
+                  <view class="bottom">
+                      <view class="btm_name">姓名:{{item.name}}</view>
+                      <view class="btm_number">排序序号:{{item.scanNumber}}</view>
+                      <view class="btm_name">检查时间:{{item.turnTime}}</view>
+                  </view>
+                  </navigator>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{!userInfo.length}}">
+            <image src='../../img/NoData.png' mode="widthFix"/>
+        </view>
+  </view>
+</view>

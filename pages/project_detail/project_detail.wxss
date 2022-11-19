@@ -1,0 +1,154 @@
+page,
+view,
+image,
+text,
+navigator {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "iconfont";
+  /* Project id 3667123 */
+  src: url('//at.alicdn.com/t/c/font_3667123_qzsu5wc863k.woff2?t=1663900606232') format('woff2'), url('//at.alicdn.com/t/c/font_3667123_qzsu5wc863k.woff?t=1663900606232') format('woff'), url('//at.alicdn.com/t/c/font_3667123_qzsu5wc863k.ttf?t=1663900606232') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-riqi:before {
+  content: "\e605";
+}
+page {
+  background-color: #6DBBB4;
+  padding: 30rpx;
+}
+page .content {
+  position: relative;
+  padding: 30rpx;
+}
+page .content .title {
+  display: flex;
+  height: 60rpx;
+}
+page .content .title .title_img {
+  flex: 1;
+}
+page .content .title .title_img image {
+  width: 100%;
+  height: 100%;
+}
+page .content .title .title_name {
+  padding-left: 30rpx;
+  flex: 13;
+  font-size: 35rpx;
+  color: white;
+}
+page .content .con_top {
+  background-color: white;
+  border-bottom: #6dbbbc 5rpx solid;
+  font-size: 35rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+page .content .con_top .top_project {
+  flex: 1;
+  text-align: center;
+  margin: 20rpx auto;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+page .content .con_top .top_date {
+  position: relative;
+  padding: 0 10rpx;
+  width: 40%;
+  border-radius: 30rpx;
+  border: 2rpx solid #6dbbbc;
+  margin: 0 auto;
+}
+page .content .con_top .top_date .top_select {
+  color: #6dbbbc;
+  display: flex;
+}
+page .content .con_top .top_date .top_select .top_select_date {
+  flex: 5;
+}
+page .content .con_top .top_date .top_select .top_select_icon {
+  flex: 1;
+}
+page .content .con_top .list .item {
+  padding: 40rpx 0;
+}
+page .content .con_top .list .item .item_time {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  color: #F26D07;
+  margin: 20rpx 0;
+}
+page .content .con_top .list .item .item_time .time_num {
+  flex: 2;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+page .content .con_top .list .item .item_queue {
+  color: #F26D07;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 30rpx 0;
+}
+page .content .con_top .list .item .item_queue .queue_title {
+  flex: 1;
+  padding-right: 20rpx;
+  text-align: right;
+}
+page .content .con_top .list .item .item_queue .queue_inp {
+  font-size: 40rpx;
+  flex: 1;
+  height: 50rpx;
+  padding-right: 40rpx;
+}
+page .content .con_top .list .item .item_queue .queue_inp input {
+  height: 100%;
+  font-weight: 600;
+  border-radius: 25rpx;
+  padding: 6rpx 20rpx;
+  font-size: 40rpx;
+  border: 2rpx solid #ccc;
+}
+page .content .con_top .list .item .item_number {
+  color: #F26D07;
+  display: flex;
+}
+page .content .con_top .list .item .item_number .number_title {
+  flex: 1;
+  text-align: right;
+}
+page .content .con_top .list .item .item_number .number_num {
+  flex: 1;
+  font-size: 40rpx;
+  font-weight: 600;
+  padding-left: 20rpx;
+}
+page .content .con_top .submit {
+  width: 300rpx;
+  height: 60rpx;
+  color: white;
+  background-color: #6DBBBc;
+  margin: 10rpx auto;
+  border-radius: 30rpx;
+  text-align: center;
+  margin-bottom: 40rpx;
+  line-height: 60rpx;
+}

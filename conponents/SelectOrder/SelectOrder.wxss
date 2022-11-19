@@ -1,0 +1,59 @@
+page {
+  margin: 0;
+  padding: 0;
+}
+page .wrap {
+  margin: 20rpx;
+  box-sizing: border-box;
+}
+page .wrap .select {
+  display: flex;
+  align-items: center;
+  width: 400rpx;
+  height: 50rpx;
+  border-radius: 20rpx;
+  background-color: white;
+}
+page .wrap .select .select_title {
+  flex: 10;
+  height: 100%;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  padding-left: 30rpx;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+}
+page .wrap .select .select_img {
+  flex: 1;
+  padding: 10rpx;
+  position: relative;
+}
+page .wrap .select .select_img .down {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 10rpx;
+  left: 0;
+  border: 16rpx solid black;
+  border-bottom: 16rpx solid transparent;
+  border-left: 16rpx solid transparent;
+  border-right: 16rpx solid transparent;
+  transition: 0.5s;
+  position: relative;
+  transform-origin: 16rpx 4rpx;
+}
+page .wrap .content {
+  margin-left: 30rpx;
+  width: 300rpx;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+page .wrap .content .item {
+  font-size: 30rpx;
+  text-align: center;
+  height: 50rpx;
+  width: 90%;
+  line-height: 40rpx;
+  border-top: 2rpx #ccc solid;
+  background-color: white;
+}

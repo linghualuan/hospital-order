@@ -1,0 +1,61 @@
+<!-- <view class="project_name"></view> -->
+<!-- <view class="set_progect">预约日期设置</view> -->
+<view class="project_wrap">
+  <!-- <view class="start">
+    <view class="start_time">开始日期：</view>
+    <view class="startInput" bindtap="handleStartDate">{{startDate}}</view>
+    <image src="../../img/Super-Admin/calendar.png" bindtap="handleStartDate"></image>
+  </view>
+  <view class="start">
+    <view class="start_time">结束日期：</view>
+    <view class="startInput" bindtap="handleEndDate">{{endDate}}</view>
+    <image src="../../img/Super-Admin/calendar.png" bindtap="handleEndDate"></image>
+  </view> -->
+
+  <view class='calendar'>
+    <van-calendar
+      title='{{orderProject}}'
+      type="multiple"
+      poppable="{{ false }}"
+      show-confirm="{{ true }}"
+      class="calendar"
+      color='#6dbbbc'
+      bind:confirm='confirmDate'
+    />
+  </view>
+
+  <view wx:for="{{timeList}}" wx:key="*this" data-index='{{index}}'>
+    <view class="subscribe_wrap">
+      <view class="sub_name">预约时段：</view>
+      <view class="time_wrap">
+        <view class="time_left">
+          <picker mode="time" value="" start="06:00" end="23:59" bindchange="bindTimeChangeStart" data-index="{{index}}">
+            <view class="picker">{{item.startTime}}</view>
+          </picker>
+        </view>
+        <view class="and">--</view>
+        <view class="time_right">
+          <picker mode="time" value="" start="06:00" end="23:59" bindchange="bindTimeChangeEnd" data-index="{{index}}">
+            <view class="picker">{{item.endTime}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="number_wrap">
+      <view class="project_number">预约数量：</view>
+      <van-stepper value="{{number}}" bind:change='onChange' data-index="{{index}}" input-class="input_class" plus-class="plus_class" minus-class="minus_class" min='0'/>
+    </view>
+  </view>
+</view>
+
+
+<view class="add_btn">
+  <view bindtap="add_time" class='item'>添加新时段</view>
+</view>
+
+
+<view class="creat_btn">
+  <view bindtap="creatProject" class='item'>创 建 预 约</view>
+</view>
+<van-calendar show="{{ showStartDate }}" bind:close="onCloseStartDate" bind:confirm="onConfirmStart" color="#6dbbb4" />
+<van-calendar show="{{ showEndDate }}" bind:close="onCloseEndDate" bind:confirm="onConfirmEnd" color="#6dbbb4" />

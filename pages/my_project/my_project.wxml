@@ -1,0 +1,19 @@
+<view wx:if="{{projectItem.length}}">
+  <view class="ing_wrap" wx:for="{{projectItem}}" wx:key="*this">
+    <navigator class="project_wrap" url="../project_detail/project_detail?orderProject={{item.orderProject}}">
+      <view class="project_left">
+        <view class="set">项目</view>
+      </view>
+      <view class="project_right">
+        <view class="check">{{item.orderProject}}</view>
+        <view class="project_name">{{item.orderDate}}</view>
+      </view>
+      <view class="project_icon">
+        <image src="../../img/enterInto.png"></image>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view wx:if="{{!projectItem.length}}" class='noData'>
+    <image src='/img/NoData.png' mode="widthFix"/>
+</view>

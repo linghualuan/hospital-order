@@ -1,0 +1,23 @@
+
+<view class='content'>
+    <view class="img">
+    <image src="/img/Super-Admin/graph.png" mode="widthFix"></image>
+</view>
+    <view class="start">
+        <view class="start_time">开始日期：</view>
+        <view class="startInput" bindtap="start_time">{{start_date}}</view>
+        <image src="../../img/Super-Admin/calendar.png" bindtap="start_time"></image>
+    </view>
+    <view class="start">
+        <view class="start_time">结束时间：</view>
+        <view class="startInput" bindtap="end_time">{{end_date}}</view>
+        <image src="../../img/Super-Admin/calendar.png" bindtap="end_time"></image>
+    </view>
+    <view class="select" bindtap='handleData'>
+        确认选择
+    </view>
+</view>
+
+
+<van-calendar min-date='{{minDate}}' max-date='{{maxDate}}' show="{{ show1 }}" bind:close="onClose1" bind:confirm="onConfirm1" color="#6dbbb4" />
+<van-calendar min-date='{{minDate}}' max-date='{{maxDate}}' show="{{ show2 }}" bind:close="onClose2" bind:confirm="onConfirm2" color="#6dbbb4" />

@@ -1,0 +1,115 @@
+<!-- 禁止滚动穿透 -->
+<page-meta page-style="{{ showPopup ? 'overflow: hidden;' : '' }}" />
+<view class='header' wx:if="{{tabs[3].isActive}}">
+    <view class="search"> <van-search placeholder="请输入搜索关键词" bind:change='handleSearch'/> </view>
+</view>
+<Tabs tabs="{{tabs}}" binditemTabChange="handleItemTabChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    <view wx:if="{{orderNurse.length}}">
+            <view class="item" wx:for="{{orderNurse}}" wx:key="*this">
+                <navigator url="../user_nurse_detail/user_nurse_detail?relId={{item.relId}}" open-type="navigate">
+                    <view class="top">
+                    <view class="top_img">
+                        {{index + 1}}
+                    </view>
+                    <view class="top_title">
+                        <view class="title_address">中南大学湘雅二医院</view>
+                        <view class="title_project">姓名:{{item.name}}</view>
+                    </view>
+                    <view class="top_icon">
+                        <image mode="widthFix" src="../../img/enterInto.png"/>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <view class="btm_number">工号:{{item.jobNum}}</view>
+                    <view class="btm_name">联系方式:{{item.tel}}</view>
+                </view>
+                </navigator>
+            </view>
+        </view>
+        <view wx:if="{{!orderNurse.length}}" class='noData'>
+            <image src='/img/NoData.png' mode="widthFix"/>
+        </view>
+  </block>
+  <block wx:elif="{{tabs[1].isActive}}">
+        <view wx:if="{{injectNurse.length}}">
+            <view class="item" wx:for="{{injectNurse}}" wx:key="*this">
+                <navigator url="../user_nurse_detail/user_nurse_detail?relId={{item.relId}}" open-type="navigate">
+                    <view class="top">
+                    <view class="top_img">
+                        {{index + 1}}
+                    </view>
+                    <view class="top_title">
+                        <view class="title_address">中南大学湘雅二医院</view>
+                        <view class="title_project">姓名:{{item.name}}</view>
+                    </view>
+                    <view class="top_icon">
+                        <image mode="widthFix" src="../../img/enterInto.png"/>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <view class="btm_number">工号:{{item.jobNum}}</view>
+                    <view class="btm_name">联系方式:{{item.tel}}</view>
+                </view>
+                </navigator>
+            </view>
+        </view>
+        <view wx:if="{{!injectNurse.length}}" class='noData'>
+            <image src='/img/NoData.png' mode="widthFix"/>
+        </view>
+  </block>
+  <block wx:elif="{{tabs[2].isActive}}">
+        <view wx:if="{{technician.length}}">
+            <view class="item" wx:for="{{technician}}" wx:key="*this">
+                <navigator url="../user_nurse_detail/user_nurse_detail?relId={{item.relId}}" open-type="navigate">
+                    <view class="top">
+                    <view class="top_img">
+                        {{index + 1}}
+                    </view>
+                    <view class="top_title">
+                        <view class="title_address">中南大学湘雅二医院</view>
+                        <view class="title_project">姓名:{{item.name}}</view>
+                    </view>
+                    <view class="top_icon">
+                        <image mode="widthFix" src="../../img/enterInto.png"/>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <view class="btm_number">工号:{{item.jobNum}}</view>
+                    <view class="btm_name">联系方式:{{item.tel}}</view>
+                </view>
+                </navigator>
+            </view>
+        </view>
+        <view wx:if="{{!technician.length}}" class='noData'>
+            <image src='/img/NoData.png' mode="widthFix"/>
+        </view>
+  </block>
+  <block wx:else>
+        <view wx:if="{{userInfo.length}}">
+            <view class="item" wx:for="{{userInfo}}" wx:key="*this" data-index='{{index}}'>
+                <navigator url="../user_detail/user_detail?relId={{item.relId}}" open-type="navigate">
+                    <view class="top">
+                    <view class="top_img">
+                        {{index + 1}}
+                    </view>
+                    <view class="top_title">
+                        <view class="title_address">中南大学湘雅二医院</view>
+                        <view class="title_project">姓名:{{item.name}}</view>
+                    </view>
+                    <view class="top_icon">
+                        <image mode="widthFix" src="../../img/enterInto.png"/>
+                    </view>
+                </view>
+                <view class="bottom">
+                    <view class="btm_number">卡号:{{item.medicalCard}}</view>
+                    <view class="btm_name">联系方式:{{item.tel}}</view>
+                </view>
+                </navigator>
+            </view>
+        </view>
+        <view wx:if="{{!userInfo.length}}" class='noData'>
+            <image src='/img/NoData.png' mode="widthFix"/>
+        </view>
+  </block>
+</Tabs>

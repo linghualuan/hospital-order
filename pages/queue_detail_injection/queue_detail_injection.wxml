@@ -1,0 +1,35 @@
+<view class="content">
+    <view class="left_div"></view>
+    <view class="right_div"></view>
+    <view class="title">
+        <view class="title_img">
+            <image mode="widthFix" src="../../img/hospital.png"/>
+        </view>
+        <view class="title_name">
+            中南大学湘雅二医院
+        </view>
+    </view>
+    <view class="con_top">
+        <view class="top_project">{{project}}</view>
+        <view class="top_date">
+            <view class='item_title'>状态:</view>
+            <text>{{injectState===0?'未完成':(injectState===1?'已注射':'失败')}}</text>
+        </view>
+        <view class="top_date" wx:if="{{position}}">
+            <view class='item_title'>注射部位:</view>
+            <text>{{position}}</text>
+        </view>
+        <view class="top_date" wx:if="{{dose}}">
+            <view class='item_title'>药物用量:</view>
+            <text>{{dose}}</text>
+        </view>
+        <view class="top_date">
+            <view class='item_title'>注射日期:</view>
+            <text>{{date}}</text>
+        </view>
+        <view class="top_date">
+            <view class='item_title'>注射完成时间:</view>
+            <text>{{time ? time : '还未检查'}}</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="content">
+    <view class='img_background'>
+        <image src="/img/background.jpg" />
+    </view>
+    <view class='wrap'>
+        <view class='img'>
+            <image src='../../img/Super-Admin/headerImg.png' />
+        </view>
+        <view class="col">
+            <view class='col_title'>账号</view>
+            <view class="inp">
+                <image src="../../img/userManagement.png"></image>
+                <input type="text" name="medicalCard" bindinput="handleAccount" placeholder="输入账号"/>
+            </view>
+        </view>
+        <view class="col">
+            <view class='col_title'>密码</view>
+            <view class="inp">
+                <image src='../../img/password.png'></image>
+                <input type="password" name="name" bindinput="handlePwd" placeholder="输入密码"/>
+            </view>
+        </view>
+        <view class="btn" bindtap="handleSubmit">登录</view>
+    </view>
+</view>

@@ -1,0 +1,78 @@
+page .content {
+  display: flex;
+  flex-direction: column;
+  background-color: #FAF2F9;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+page .content .img_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+page .content .img_background image {
+  width: 100%;
+  height: 100%;
+}
+page .content .wrap {
+  width: 80vw;
+  height: 70vh;
+  margin: 40px auto;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+page .content .wrap .img {
+  margin: 0 auto;
+  width: 250rpx;
+  height: 250rpx;
+}
+page .content .wrap .img image {
+  width: 250rpx;
+  height: 250rpx;
+  margin-top: 20rpx;
+}
+page .content .wrap .col {
+  margin: 30rpx 40rpx;
+}
+page .content .wrap .col .col_title {
+  width: 400rpx;
+  margin: 0 auto;
+  color: white;
+}
+page .content .wrap .col .inp {
+  margin: 0 auto;
+  position: relative;
+  height: 60rpx;
+  width: 400rpx;
+}
+page .content .wrap .col .inp image {
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  top: 10rpx;
+  left: 10rpx;
+}
+page .content .wrap .col .inp input {
+  width: 400rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 5rpx 0;
+  padding-left: 70rpx;
+  height: 100%;
+  font-size: 34rpx;
+  line-height: 60rpx;
+  font-weight: 200;
+}
+page .content .wrap .btn {
+  width: 300rpx;
+  height: 70rpx;
+  color: black;
+  border-radius: 35rpx;
+  text-align: center;
+  line-height: 70rpx;
+  margin: 0 auto;
+  margin-top: 150rpx;
+  background-color: white;
+}

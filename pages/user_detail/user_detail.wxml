@@ -1,0 +1,28 @@
+<view class="user_wrap">
+    <view class="col">
+        <view class="title">卡号 : </view>
+        <view class="inp">
+            <input type="text" value='{{medicalCard}}' bindinput='handleMedicalCard'></input>
+        </view>
+    </view>
+    <view class="col">
+        <view class="title">姓名 : </view>
+        <view class="inp">
+            <input type="text" value='{{name}}' bindinput='handleName'></input>
+        </view>
+    </view>
+    <view class="col">
+        <view class="title">性别 : </view>
+        <view class="inp">
+            <input type="text" value='{{sex}}' bindinput='handleSex'></input>
+        </view>
+    </view>
+    <view class="col">
+        <view class="title">联系方式 : </view>
+        <view class="inp">
+            <input type="text" value='{{tel}}' bindinput='handleTel'></input>
+        </view>
+    </view>
+</view>
+<button class="submit" bindtap='handleSubmit'>提交</button>
+<button class="delete" bindtap='handleDelete'>注销</button>

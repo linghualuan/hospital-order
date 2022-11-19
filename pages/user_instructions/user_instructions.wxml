@@ -1,0 +1,10 @@
+<view class='header'>
+    <view class='dot'></view>
+    <view class='header_item'>
+        需要微信授权才能使用
+    </view>
+</view>
+<view class='item' wx:for="{{content}}" wx:key="*this">
+    <span>*</span>
+    {{item}}
+</view>
